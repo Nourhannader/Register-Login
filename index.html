@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- SweetAlert2 CSS (optional, but recommended) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-default@5/default.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <script src="./script.js" defer></script>
+    <title>login</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper sign-up">
+        <form>
+          <h2>Sign Up</h2>
+          <div class="input-group">
+            <input type="text" />
+            <label for="">Username</label>
+            <small class="error-msg"></small>
+          </div>
+          <div class="input-group">
+            <input type="text" />
+            <label for="">Email</label>
+            <small class="error-msg"></small>
+          </div>
+          <div class="input-group pass">
+            <input type="password" />
+            <label for="">Password</label>
+            <small class="error-msg"></small>
+            <div class="password-checklist">
+              <ul class="checklist">
+                <li class="list-item">At least 8 character long</li>
+                <li class="list-item">At least 1 number</li>
+                <li class="list-item">At least 1 lowercase letter</li>
+                <li class="list-item">At least 1 uppercase letter</li>
+                <li class="list-item">At least 1 spacial character</li>
+              </ul>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Sign up</button>
+          <div class="sign-link">
+            <p>
+              Already have an account?
+              <a href="#" class="signIn-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="form-wrapper sign-in">
+        <form action="">
+          <h2>Login</h2>
+          <div class="input-group">
+            <input type="text" />
+            <label for="">Username</label>
+            <small class="error-msg"></small>
+          </div>
+          <div class="input-group">
+            <input type="password" />
+            <label for="">Password</label>
+            <small class="error-msg"></small>
+          </div>
+          <div class="forgot-pass">
+            <a href="#">Forgot Password</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="social-buttons">
+            <button class="socail-btn" onclick="loginWithGoogle()"><i class="fa-brands fa-google-plus"></i></button>
+            <button class="socail-btn"><i class="fa-brands fa-facebook"></i></button>
+            <button onclick="loginWithGithub()" class="socail-btn"><i class="fa-brands fa-github"></i></button>
+          </div>
+          <div class="sign-link">
+            <p>
+              Don't have an account? <a href="#" class="signUp-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <!-- 1) Load SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
